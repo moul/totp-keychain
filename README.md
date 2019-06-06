@@ -1,5 +1,33 @@
 # totp-keychain
-:lock: simple TOTP client backed by the keychain
+:lock: simple TOTP client backed by the keychain (OS X only)
+
+## Usage
+
+```console
+$ totp-keychain add moul@github JBSWY3DPEHPK3PXP
+2019/06/06 17:59:17 OK
+
+$ totp-keychain add moul@cloudflare HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ
+2019/06/06 18:00:32 OK
+
+$ totp-keychain ls
+- moul@github
+- moul@cloudflare
+
+$ totp-keychain get moul@github
+427530
+
+$ totp-keychain get moul@cloudflare
+553053
+
+$ sleep 30
+
+$ totp-keychain get moul@github
+600322
+
+$ totp-keychain get moul@cloudflare
+007099
+```
 
 ## Install
 
@@ -32,32 +60,4 @@ COMMANDS:
 GLOBAL OPTIONS:
    --help, -h     show help
    --version, -v  print the version
-```
-
-## Usage
-
-```console
-$ totp-keychain add moul@github JBSWY3DPEHPK3PXP
-2019/06/06 17:59:17 OK
-
-$ totp-keychain add moul@cloudflare HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ
-2019/06/06 18:00:32 OK
-
-$ totp-keychain ls
-- moul@github
-- moul@cloudflare
-
-$ totp-keychain get moul@github
-427530
-
-$ totp-keychain get moul@cloudflare
-553053
-
-$ sleep 30
-
-$ totp-keychain get moul@github
-600322
-
-$ totp-keychain get moul@cloudflare
-007099
 ```
