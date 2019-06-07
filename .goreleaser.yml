@@ -1,0 +1,19 @@
+before:
+  hooks:
+    - go mod download
+builds:
+  -
+    goos: [darwin]
+    goarch: [amd64]
+archives:
+  - wrap_in_directory: true
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
