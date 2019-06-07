@@ -17,3 +17,13 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
+brew:
+  name: totp-keychain
+  github:
+    owner: moul
+    name: homebrew-moul
+  commit_author:
+    name: moul-bot
+    email: "m+bot@42.am"
+  homepage: https://manfred.life/cryptography
+  description: TOTP cli backed by the OS X keychain
