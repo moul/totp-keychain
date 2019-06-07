@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build: # this check doesn't build the project because I don't have a macos plan on circleci
+    docker:
+      - image: circleci/golang:1.12
+    working_directory: /go/src/github.com/moul.io/totp-keychain
+    environment:
+      GO111MODULE=on
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gopkg-{{ checksum "go.sum" }}
+      - run: go mod download
+      - run: gofmt -w -s .
+      # here, should go 'go install', 'go test', etc; depends on macos plan
+      - save_cache:
+          key: v1-pkg-cache
+          paths:
+            - "/go/pkg"
