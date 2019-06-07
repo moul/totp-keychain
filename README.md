@@ -31,6 +31,12 @@ $ totp-keychain get moul@cloudflare
 
 ## Install
 
+With Homebrew
+
+    brew install moul/moul/totp-keychain
+    
+With Golang
+
 ```console
 $ go get -u moul.io/totp-keychain
 go: finding moul.io/totp-keychain latest
