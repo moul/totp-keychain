@@ -5,5 +5,5 @@ go 1.12
 require (
 	github.com/keybase/go-keychain v0.0.0-20190604185112-cc436cc9fe98
 	github.com/pquerna/otp v1.2.0
-	github.com/urfave/cli v1.20.0
+	github.com/urfave/cli/v2/v2 v2.3.0
 )
