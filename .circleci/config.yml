@@ -2,7 +2,7 @@ version: 2
 jobs:
   build: # this check doesn't build the project because I don't have a macos plan on circleci
     docker:
-      - image: circleci/golang:1.12
+      - image: circleci/golang:1.17
     working_directory: /go/src/github.com/moul.io/totp-keychain
     environment:
       GO111MODULE=on
